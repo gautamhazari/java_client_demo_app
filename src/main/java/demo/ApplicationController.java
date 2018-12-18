@@ -25,14 +25,12 @@ public class ApplicationController {
     @PostMapping(value = {"/", "startDiscovery"})
     public ModelAndView redirect(HttpServletRequest request, @ModelAttribute Subscriber subscriber) {
         String url = UrlUtils.getUrl(propertiesManager.getDiscoveryUrl(), subscriber);
-        System.out.println(url);
         return new ModelAndView("redirect:" + url);
     }
 
-    @PostMapping(value = {"connect", "withoutDiscovery"})
+    @PostMapping(value = {"withoutDiscovery"})
     public ModelAndView redirectWD(HttpServletRequest request, @ModelAttribute Subscriber subscriber) {
         String url = UrlUtils.getUrl(propertiesManager.getWithoutDiscoveryUrl(), subscriber);
-        System.out.println(url);
         return new ModelAndView("redirect:" + url);
     }
 
@@ -42,23 +40,11 @@ public class ApplicationController {
         return "withoutDiscovery";
     }
 
-//    @PostMapping("connect")
-//    public ModelAndView redirectc(HttpServletRequest request, @ModelAttribute Subscriber subscriber) {
-//        String url = UrlUtils.getDiscoveryUrl(propertiesManager.getDiscoveryUrl(), subscriber);
-//        return new ModelAndView("redirect:" + url);
-//    }
-
     @GetMapping("startDiscovery")
     public String getParamsD(Model model) {
         model.addAttribute("request", new Subscriber());
         return "withoutDiscovery";
     }
-
-//    @PostMapping("startDiscovery")
-//    public ModelAndView redirectD(HttpServletRequest request, @ModelAttribute Subscriber subscriber) {
-//        String url = UrlUtils.getDiscoveryUrl(propertiesManager.getDiscoveryUrl(), subscriber);
-//        return new ModelAndView("redirect:" + url);
-//    }
 
     @GetMapping("withoutDiscovery")
     public String wd(Model model) {
