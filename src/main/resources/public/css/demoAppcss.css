@@ -4,6 +4,7 @@
 .navbar {
     background: #5a5277;
     background-image: -webkit-linear-gradient(top, #5a5277 0%, #5a5260 100%);
+    background-position: center;
     background-image:      -o-linear-gradient(top, #5a5277 0%, #5a5260 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, from(#5a5277), to(#5a5260));
     background-image:         linear-gradient(to bottom, #5a5277 0%, #5a5260 100%);
@@ -33,7 +34,17 @@ input[type=checkbox], input[type=radio]
     -moz-transform: scale(1.5); /* FF */
     -webkit-transform: scale(1.5); /* Safari and Chrome */
     -o-transform: scale(1.5); /* Opera */
-    padding: 10px;
+    padding-left: 10px;
+}
+input[type=image]
+{
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1); /* IE */
+    -moz-transform: scale(1); /* FF */
+    -webkit-transform: scale(1); /* Safari and Chrome */
+    -o-transform: scale(1); /* Opera */
+    padding-right: 10px;
+    border: 0px solid black;
 }
 
 input[type]
@@ -46,29 +57,34 @@ input[type]
 .noneConfigure, .metadata-configure {
     text-align: left;
     padding-top: 5px;
+    padding-left: 10px;
     font-size: 5px;
 }
 .msisdnConfigure, .metadata-configure {
     text-align: left;
     padding-top: 5px;
+    padding-left: 10px;
     font-size: 5px;
     height: 66px;
 }
 .msisdnwdConfigure, .metadata-configure {
     text-align: left;
     padding-top: 5px;
+    padding-left: 10px;
     font-size: 5px;
     height: 66px;
 }
 .mccMncConfigure, .metadata-configure {
     text-align: left;
     padding-top: 5px;
+    padding-left: 10px;
     font-size: 5px;
     height: 66px;
 }
 .ipConfigure, .metadata-configure {
     text-align: left;
     padding-top: 5px;
+    padding-left: 10px;
     font-size: 5px;
 }
 
@@ -172,7 +188,7 @@ input #clientName, .center-block, test {
 
 #getToken {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
     display: block;
 }
 
@@ -217,8 +233,8 @@ th {
 
 .parent {
     display: flex;
-    float: left;
-    display: inline-block;
+    float: none;
+    display: contents;
 }
 .configure-another-place {
     margin-top: 50px;
