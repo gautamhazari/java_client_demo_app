@@ -18,7 +18,7 @@ Note: if you operate in the EU then you should use EU Discovery Service domain i
 ```posh
 mvn clean install
 cd target
-java -jar .\server_side_demo-app-0.1.0.war
+java -jar .\server_side_demo-app-1.0.0.war
 ```
 
 5. Navigate to http://localhost:8083 in your browser.
