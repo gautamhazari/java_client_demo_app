@@ -7,12 +7,21 @@ Note: if you operate in the EU then you should use EU Discovery Service domain i
 
 ## Quick Start
 
+1. Deploy any Server Side Application.
+
+2. Clone java_client_demo_app.
+
+3. Put urls that are associated with "with/without discovery" modes in deployed Server Side SDK in file \local-path\java_client_demo_app\src\main\resources\config\config.properties as config.url.
+
+4. Open console from demo_app directory and execute following commands:
+
 ```posh
 mvn clean install
 cd target
 java -jar .\server_side_demo-app-0.1.0.war
 ```
-Deploy mobile-connect.war
+
+5. Navigate to http://localhost:8083 in your browser.
 
 ## Support
 
