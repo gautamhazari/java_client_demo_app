@@ -61,6 +61,9 @@ var getRequestParameters = function getRequestParameters() {
         if ($('#msisdn-toogle').is(':checked')) {
             msisdn = input.val();
         }
+        else if ($('#msisdnwd-toogle').is(':checked')) {
+            msisdn = input.val();
+        }
         api.discovery(msisdn);
     });
 
@@ -241,6 +244,15 @@ var printInfo = function printInfo(response) {
 };
 var newSDKSession = "";
 
+window.addEventListener( "pageshow", function ( event ) {
+    var historyTraversal = event.persisted ||
+        ( typeof window.performance != "undefined" &&
+            window.performance.navigation.type === 2 );
+    if ( historyTraversal ) {
+        window.location.reload();
+    }
+});
+
 var api = {
     demoapp: true,
     currentAttempt: {},
@@ -400,6 +412,15 @@ $(document).ready(function ($) {
         } else {
             $("#msisdn").hide('slow');
             $("#msisdn").value = "";
+        }
+    });
+
+    $('#msisdnwd-toogle').change(function () {
+        if ($(this).is(':checked')) {
+            $("#msisdnwd").show('slow');
+        } else {
+            $("#msisdnwd").hide('slow');
+            $("#msisdnwd").value = "";
         }
     });
 

@@ -1,10 +1,5 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<meta http-equiv = "cache-control" content = "no-cache">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Server Side Demo Application</title>
+    <title>EXAMPLE APPLICATION</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -30,12 +25,24 @@
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/index">Choose your application</a>
+        </div>
+
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active" id="demoAppURL"><a href="#connect.html;">Server side demo application</a></li>
+                <li class="active" id="demoAppURL"><a href="#index.html;">Demo application</a></li>
+                <li class="not" id="withoutDiscoveryURL"><a action="/withoutDiscovery.html" href="/withoutDiscovery">Without Discovery</a>
                 </li>
             </ul>
-        </div>
+        </div><!--/.nav-collapse -->
     </div>
 </nav>
 
@@ -44,7 +51,7 @@
 
         <div class="jumbotron">
             <h3>Parameters</h3>
-            <form action="#" th:action="@{/connect}" th:object="${request}" method="post">
+            <form action="#" th:action="@{/startDiscovery}" th:object="${request}" method="post">
 
 
                 <p class="msisdnConfigure">
@@ -84,7 +91,6 @@
     </iframe>
 
 
-</div>
 </div>
 
 <!-- Bootstrap core JavaScript

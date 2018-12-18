@@ -25,8 +25,12 @@ public class PropertiesManager {
         }
     }
 
-    public String getUrl() {
-        return prop.getProperty("config.url");
+    public String getDiscoveryUrl() {
+        return prop.getProperty("config.discovery.url");
+    }
+
+    public String getWithoutDiscoveryUrl() {
+        return prop.getProperty("config.without.discovery.url");
     }
 
     private String parsePropertyPath(String file) {

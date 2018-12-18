@@ -30,7 +30,7 @@ public class UrlUtils {
     }
 
     private static URIBuilder addParameter(URIBuilder uri, String name, String value) {
-        if (!value.isEmpty()) {
+        if (value != null && !value.isEmpty()) {
             return uri.addParameter(name, value);
         }
         else {
