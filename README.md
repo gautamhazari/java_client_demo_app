@@ -29,9 +29,11 @@ If you encounter any issues which are not resolved by consulting the resources b
 
 ## Resources
 
-- [MobileConnect Java Server Side Library](https://developer.mobileconnect.io/content/java-server-side-library)
-- [MobileConnect Android Client Side Library](https://developer.mobileconnect.io/content/android-client-side-library)
-- [MobileConnect iOS Client Side Library](https://integration.developer.mobileconnect.io/mobile-connect-library-for-ios)
+- [MobileConnect Java Server Side Library](https://developer.mobileconnect.io/mobile-connect-java-sdk)
+- [MobileConnect PHP Server Side Library](https://developer.mobileconnect.io/mobile-connect-php-sdk)
+- [MobileConnect .NET Server Side Library](https://developer.mobileconnect.io/mobile-connect-dotnet-sdk)
+- [MobileConnect Android Client Side Library](https://developer.mobileconnect.io/mobile-connect-library-for-android)
+- [MobileConnect iOS Client Side Library](https://developer.mobileconnect.io/mobile-connect-library-for-ios)
 
 - [MobileConnect Discovery API Information](https://developer.mobileconnect.io/discovery-api)
 - [MobileConnect Authentication API Information](https://developer.mobileconnect.io/mobile-connect-api)
